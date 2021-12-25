@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Profile from './Profile/profileComponents';
+
 
 function App() {
+
+  /*The HandleName Function */
+
+  const handleName = name => alert (name);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Profile fullname="Fullname:Emna Abdessalem"  bio="Bio:I am learning how to develop Websites" 
+      profession="Profession:WebDevelopment Student" handleName={handleName}>
+         http://erothtechnologies.com/assets/uploads/file-59.jpg </Profile>
     </div>
   );
 }
