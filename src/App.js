@@ -1,19 +1,30 @@
-import React from 'react';
-import Profile from './Profile/profileComponents';
+import React,{useState} from 'react';
+import './App.css';
+import Navbar from './Components/Navbar/navbar';
+import Filter from './Components/Filter/filter';
+import Adding from './Components/Adding/adding';
+import MovieList from './Components/MovieList/movieList';
+import {movies} from './Components/movies';
+import Footer from './Components/Footer/footer';
 
 
 function App() {
-
-  /*The HandleName Function */
-
-  const handleName = name => alert (name);
+const [movieList,setMovieList]=useState(movies);
 
   return (
     <div className="App">
 
-      <Profile fullname="Fullname:Emna Abdessalem"  bio="Bio:I am learning how to develop Websites" 
-      profession="Profession:WebDevelopment Student" handleName={handleName}>
-         http://erothtechnologies.com/assets/uploads/file-59.jpg </Profile>
+      <div className="Start">
+    <Navbar/>
+    <Filter/>
+    </div>
+    <MovieList movieList={movieList} />
+    <br/> <br/> <br/>
+    <div className="addButton">
+    <Adding/>
+    <br/> <br/>
+    </div>
+    <Footer/>
     </div>
   );
 }

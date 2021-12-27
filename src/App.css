@@ -1,0 +1,12 @@
+.App{
+    background-color: black;
+    
+}
+.Start{
+    display:flex;
+    justify-content: space-between;
+    
+}
+.addButton{
+    margin-left: 590px;
+}
