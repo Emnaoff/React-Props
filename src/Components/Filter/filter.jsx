@@ -1,9 +1,12 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import {Form,FormControl,Button} from 'react-bootstrap';
 import Rating from '../Rating/rating';
 import  './filter.css';
 
-function filter() {
+function Filter() {
+
+  
+
     return (
         <div>
           <div className="btn-group">
@@ -12,9 +15,13 @@ function filter() {
              <Form className="d-flex">
     <FormControl
       type="search"
-      placeholder="Search"
+      placeholder="i.e Titanic"
       className="me-2"
       aria-label="Search"
+
+      
+      
+      
     />
     
     <Button variant="warning">Search</Button>
@@ -25,4 +32,4 @@ function filter() {
     )
 }
 
-export default filter
+export default Filter

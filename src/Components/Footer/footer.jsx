@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 function footer() {
    
     return (
-        <div className="foot" style={{color: 'white',backgroundColor:'rgb(22, 22, 22)',textAlign:'center', fontFamily:'Verdana, Geneva, Tahoma, sans-serif',paddingBottom: '10px'}}>
+        <div className="foot" style={{color: 'white',backgroundColor:'black',textAlign:'center', fontFamily:'Verdana, Geneva, Tahoma, sans-serif',paddingBottom: '10px'}}>
  <hr/>
  <p>Tunflix</p>
  <hr/>

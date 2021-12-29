@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button,Modal,Form} from 'react-bootstrap';
 
-export default function Adding() {
+export default function Adding({addMovie}) {
 
     /*The modals functions*/
     const [show, setShow] = useState(false);
@@ -9,9 +9,11 @@ export default function Adding() {
 
     /*Adding a movie*/ 
    const [title,setTitle]=useState('');
+   const [type,setType]=useState('');
    const [description,setDescription]=useState('');
    const [image,setImage]=useState('');
    const [rating,setRating]=useState('');
+   const [trailer,setTrailer]=useState('');
    
    
   
@@ -54,6 +56,15 @@ export default function Adding() {
     <Form.Label>Movie Rating</Form.Label>
     <Form.Control type="email" placeholder="Rate your experience with the movie here"onChange={(el)=>setRating(el.target.value)} />
   </Form.Group>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+    <Form.Label>Movie Type</Form.Label>
+    <Form.Control type="email" placeholder="Rate your experience with the movie here"onChange={(el)=>setType(el.target.value)} />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+    <Form.Label>Movie Trailer </Form.Label>
+    <Form.Control type="email" placeholder="Rate your experience with the movie here"onChange={(el)=>setTrailer(el.target.value)} />
+  </Form.Group>
+  
 </Form>
 
 </>

@@ -10,6 +10,9 @@ import Footer from './Components/Footer/footer';
 
 function App() {
 const [movieList,setMovieList]=useState(movies);
+const addMovie =(newMovie) =>{
+  setMovieList([...movies,newMovie]);
+}
 
   return (
     <div className="App">
@@ -21,8 +24,8 @@ const [movieList,setMovieList]=useState(movies);
     <MovieList movieList={movieList} />
     <br/> <br/> <br/>
     <div className="addButton">
-    <Adding/>
-    <br/> <br/>
+    <Adding newMovie={addMovie}/>
+    <br/> <br/> <br/> <br/>
     </div>
     <Footer/>
     </div>
